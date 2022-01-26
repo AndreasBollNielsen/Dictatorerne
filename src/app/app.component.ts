@@ -9,10 +9,12 @@ import { RequestsService } from './Services/requests.service';
 })
 export class AppComponent implements OnInit {
   title = 'Dictatorerne';
-dictatorLists: Dictators[] = [];
-  constructor(private regservice: RequestsService) {}
+
+  constructor() {
+
+  }
 
   ngOnInit(): void {
-    this.regservice.GetData().subscribe((data: Dictators[])=> {next: this.dictatorLists = data; complete: console.log(data)});
+
   }
 }

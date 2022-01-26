@@ -1,0 +1,20 @@
+.background
+{
+  background-color: rgb(101, 148, 236);
+  border-style: solid;
+  border-width: 2px;
+  border-color: rgb(158, 218, 80);
+  border-radius: 10px;
+}
+
+.smoothborder{
+  border-style: solid;
+  border-width: 2px;
+  border-color: rgb(158, 218, 80);
+  border-radius: 10px;
+}
+
+
+.shadows{
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}

@@ -4,16 +4,21 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MyformComponent } from './myform/myform.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DictatorListComponent } from './dictator-list/dictator-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MyformComponent
+    MyformComponent,
+    DictatorListComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

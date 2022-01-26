@@ -1,4 +1,9 @@
 export interface Dictators {
 
-  name: string;
+  firstname: string;
+  lastname:string;
+  birthdate:string;
+  deathdate:string;
+  description:string;
+
 }

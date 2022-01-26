@@ -1,1 +1,55 @@
-<p>myform works!</p>
+<h4 class="text-center">Add new dictator</h4>
+
+<div class="container background shadows">
+  <form [formGroup]="registrationForm" (ngSubmit)="submitForm()">
+    <!--names-->
+    <div class="row p-2">
+      <div class="col">
+        <div class="form-group">
+          <label for="firstname">first name</label>
+          <input [class.is-invalid]="registrationForm.get('firstname')?.invalid && registrationForm.get('firstname')?.touched" type="text" class="form-control" formControlName="firstname" id="firstname" />
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-group">
+          <label for="lastname">last name</label>
+          <input [class.is-invalid]="registrationForm.get('lastname')?.invalid && registrationForm.get('lastname')?.touched" type="text" class="form-control" formControlName="lastname" id="lastname" />
+        </div>
+      </div>
+    </div>
+
+    <!--dates-->
+    <div class="row p-2">
+      <div class="col">
+        <div class="form-group">
+          <label for="birth">birth date</label>
+          <input [class.is-invalid]="registrationForm.get('birthdate')?.invalid && registrationForm.get('birthdate')?.touched" type="date" class="form-control" formControlName="birthdate" id="birth" />
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-group">
+          <label for="death">death date</label>
+          <input [class.is-invalid]="registrationForm.get('deathdate')?.invalid && registrationForm.get('deathdate')?.touched" type="date" class="form-control" formControlName="deathdate" id="death" />
+        </div>
+      </div>
+    </div>
+
+    <!--description-->
+    <div class="row p-2">
+      <div class="col">
+        <div class="form-group">
+          <label for="descr">Description</label>
+          <textarea [class.is-invalid]="registrationForm.get('description')?.invalid && registrationForm.get('description')?.touched" id="descr" class="form-control" formControlName="description" rows="5"></textarea>
+        </div>
+      </div>
+    </div>
+
+<!--submit-->
+<div class="row p-2">
+  <div class="col">
+    <button [disabled]="!registrationForm.valid" class="btn btn-primary smoothborder">submit</button>
+
+  </div>
+</div>
+  </form>
+</div>

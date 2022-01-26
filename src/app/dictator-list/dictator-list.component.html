@@ -1,0 +1,86 @@
+<h4 class="text-center">List of current Dictators</h4>
+
+<div class="container">
+  <div class="col p-2">
+    <button (click)="GetList()" class="btn btn-info roundBorder">get list</button>
+  </div>
+</div>
+
+<div class="container roundBorder  background shadows">
+
+  <div class="row">
+    <div class="col">
+      <h5>First name & Last name</h5>
+    </div>
+    <div class="col">
+      <h5>BirthDate & DeathDate</h5>
+    </div>
+    <div class="col">
+      <h5>Description</h5>
+    </div>
+    <div class="col">
+      <h5>Edit</h5>
+    </div>
+
+  </div>
+
+
+
+  <div class="row p-2 border" *ngFor="let dictator of dictatorlist; index as i">
+    <!--names-->
+    <div class="col">
+      <div class="row">
+        <div class="col">
+          <label>first name:</label>
+        </div>
+        <div class="col">
+          <label>{{ dictator.firstname }}</label>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <label>last name:</label>
+          </div>
+          <div class="col">
+            <label>{{ dictator.lastname }}</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--dates-->
+    <div class="col">
+      <div class="row">
+        <div class="col">
+          <label>birth date:</label>
+        </div>
+        <div class="col">
+          <label>{{ dictator.birthdate }}</label>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <label>death date:</label>
+          </div>
+          <div class="col">
+            <label>{{ dictator.deathdate }}</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--description-->
+    <div class="col">
+      <label>{{ dictator.description }}</label>
+    </div>
+
+    <!--button-->
+    <div class="col">
+      <button (click)="deleteItem(i)" class="btn btn-danger roundBorder">Delete</button>
+    </div>
+
+
+  </div>
+</div>
+
+<!--  -->
